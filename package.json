@@ -1,0 +1,38 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run copy-assets && npm run copy-views",
+    "copy-assets": "ncp src/Public dist/Public",
+    "copy-views": "ncp src/Views dist/Views",
+    "start": "nodemon --exec ts-node src/app.ts"
+  },
+  "author": "Meshvi Shah",
+  "license": "ISC",
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.4",
+    "@types/koa": "^2.13.9",
+    "@types/koa-router": "^7.4.5",
+    "@types/node": "^20.8.3",
+    "bcrypt": "^5.1.1",
+    "bcrypt-ts": "^4.0.1",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.14.2",
+    "koa-body": "^6.0.1",
+    "koa-bodyparser": "^4.4.1",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^12.0.0",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
+    "sequelize": "^6.33.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/koa-bodyparser": "^4.3.10"
+  }
+}

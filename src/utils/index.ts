@@ -1,1 +1,2 @@
-export { hashPassword } from './hashPassword.util'
+export { hashPassword } from './hashPassword.util';
+export {comparePassword} from './bcryptPassword.util'

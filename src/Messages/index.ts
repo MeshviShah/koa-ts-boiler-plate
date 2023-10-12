@@ -11,5 +11,6 @@ export const messages = {
       },
     user: {
         USER_ALREADY_EXIST: 'User already exist',
+        NO_USER_FOUND: 'No user found'
     }
 }

@@ -5,4 +5,5 @@ export {
   passwordValidator,
   roleNameValidator,
   MediaCreditValidator,
+  validation,
 } from './user.validator';

@@ -1,5 +1,10 @@
 import { Context } from 'koa';
-import { createUserService, findUserByEmailService } from '../Services';
+import {
+  createUserService,
+  findUserByEmailService,
+  findUserByIdService,
+  getUserListService,
+} from '../Services';
 import { sequelizeConnection } from '../Config';
 import { response } from '../Interceptor';
 import { hashPassword } from '../utils';
@@ -36,4 +41,15 @@ export const createUserController = async (ctx: Context): Promise<void> => {
       data: user,
     });
   });
+};
+
+export const getUserByIDController = async (ctx: Context): Promise<any> => {
+  const id = ctx.params.id;
+  const user = await findUserByIdService(id);
+  return user;
+};
+
+export const getUserListController = async (ctx: Context): Promise<any> => {
+  const user = await getUserListService();
+  return user;
 };
